@@ -9,10 +9,8 @@ public:
         for(int i = 0; i < s.size(); i++) {
             if(s[i] == '(') myStack.push(i);  
             else if(myStack.size() == 1) myStack.top() = i;
-            else {
-                myStack.pop();    
-                ans = max(ans, i - myStack.top());
-            }
+            else myStack.pop();    
+            ans = max(ans, i - myStack.top());
         }
 
         return ans;
@@ -25,10 +23,8 @@ public:
         // for(int i = 0; i < s.size(); i++) {
         //     if(s[i] == '(') v.push_back(i);  
         //     else if(v.size() == 1) v[v.size()-1] = i;
-        //     else {
-        //         v.pop_back();    
-        //         ans = max(ans, i - v[v.size()-1]);
-        //     }
+        //     else v.pop_back();    
+        //     ans = max(ans, i - v[v.size()-1]);
         // }
 
         // return ans;
