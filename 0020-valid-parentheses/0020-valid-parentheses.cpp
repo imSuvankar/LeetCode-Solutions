@@ -8,8 +8,8 @@ public:
             
             else {
                 if(st.empty()) return false;
-                else if((i == ')' && st.top() != '(') || (i == '}' && st.top() != '{') || (i == ']' && st.top() != '[')) return false;
-                else st.pop();
+                else if((i == ')' && st.top() == '(') || (i == '}' && st.top() == '{') || (i == ']' && st.top() == '[')) st.pop();
+                else return false;
             }
         }
 
