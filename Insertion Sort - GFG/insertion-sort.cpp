@@ -14,6 +14,7 @@ void printArray(int arr[], int size)
 
 
 // } Driver Code Ends
+
 #include <bits/stdc++.h>
 
 class Solution
@@ -23,8 +24,8 @@ class Solution
     {
         for(int i = 1; i < n; i++) {
             int j = i;
-            while(j > 0 && arr[j-1] > arr[j]) {
-                std::swap(arr[j-1], arr[j]);
+            while(j > 0 && arr[j] < arr[j-1]) {
+                std::swap(arr[j], arr[j-1]);
                 j--;
             }
         }
