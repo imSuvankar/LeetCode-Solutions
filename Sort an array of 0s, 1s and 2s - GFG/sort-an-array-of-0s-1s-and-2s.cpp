@@ -10,6 +10,8 @@ class Solution
     public:
     void sort012(int a[], int n)
     {
+        // using 3-pointer approach
+        
         int start = 0;
         int mid = 0;
         int end = n-1;
