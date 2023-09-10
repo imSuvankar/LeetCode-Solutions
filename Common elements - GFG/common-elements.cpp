@@ -26,8 +26,8 @@ class Solution
             }
         } 
         
-        set<int> ANS(ans.begin(), ans.end());
-        return vector<int>(ANS.begin(), ANS.end());
+        set<int> setAns(ans.begin(), ans.end());
+        return vector<int>(setAns.begin(), setAns.end());
     }
 };
 
