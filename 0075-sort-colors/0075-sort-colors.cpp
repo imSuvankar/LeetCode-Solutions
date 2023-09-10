@@ -9,9 +9,7 @@ public:
         map<int, int> intMap;
         for(int i : nums) intMap[i]++;
 
-        vector<int> ans;
-        for(auto i : intMap) ans.insert(ans.end(), i.second, i.first); 
-        
-        nums = ans;
+        nums.clear();
+        for(auto i : intMap) nums.insert(nums.end(), i.second, i.first); 
     }
 };
