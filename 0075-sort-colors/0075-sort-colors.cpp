@@ -3,8 +3,8 @@ public:
     void sortColors(vector<int>& nums) {
         
         // sorting -> O(nlogn)
-        // counting -> O(n) 
-        // although it's meant to be solved by sorting, and not map-count method
+        // counting / 3-pointer -> O(n) 
+        // here solved using counting approach
 
         map<int, int> intMap;
         for(int i : nums) intMap[i]++;
