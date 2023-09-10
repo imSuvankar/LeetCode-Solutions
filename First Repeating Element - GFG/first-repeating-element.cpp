@@ -12,9 +12,9 @@ class Solution {
     int firstRepeated(int arr[], int n) {
         
         unordered_map<int, int> intMap;
-        for (int i = 0; i < n; ++i) intMap[arr[i]]++;
+        for (int i = 0; i < n; i++) intMap[arr[i]]++;
         
-        for (int i = 0; i < n; ++i) if(intMap[arr[i]] > 1) return i+1;
+        for (int i = 0; i < n; i++) if(intMap[arr[i]] > 1) return i+1;
         return -1;
     }
 };
