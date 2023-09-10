@@ -10,11 +10,11 @@ class Solution
     vector <int> commonElements (int A[], int B[], int C[], int n1, int n2, int n3)
     {
         int i = 0, j = 0, k = 0;
-        vector<int> ans;
+        set<int> ans;
         
         while(i < n1 && j < n2 && k < n3) {
             if(A[i] == B[j] && B[j] == C[k]) { 
-                ans.push_back(A[i]);
+                ans.insert(A[i]);
                 i++, j++, k++;
             }
             
@@ -26,8 +26,7 @@ class Solution
             }
         } 
         
-        set<int> setAns(ans.begin(), ans.end());
-        return vector<int>(setAns.begin(), setAns.end());
+        return vector<int>(ans.begin(), ans.end());
     }
 };
 
