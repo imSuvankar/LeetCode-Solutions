@@ -13,7 +13,7 @@ public:
         while (i >= 0) {
             newNum = arr[i] + carry;
             ans.insert(ans.begin(), newNum % 10);
-            (newNum - 9 > 0) ? carry = newNum - 9 : carry = 0; 
+            carry = (newNum - 9 > 0) ? newNum - 9 : 0; 
             i--;
         }
 
