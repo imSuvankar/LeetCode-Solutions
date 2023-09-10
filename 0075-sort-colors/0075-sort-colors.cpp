@@ -4,7 +4,7 @@ public:
         
         // sorting -> O(nlogn)
         // counting -> O(n) 
-        // although it's meant to be solved by sorting, and not map-count method 
+        // although it's meant to be solved by sorting, and not map-count method
 
         map<int, int> intMap;
         for(int i : nums) intMap[i]++;
