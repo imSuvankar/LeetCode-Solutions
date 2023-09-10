@@ -5,7 +5,7 @@ public:
     void push(int val) {
         ans.push({val, ans.empty() ? val : min(val, ans.top().second)});
     }
-
+    
     void pop() {
         ans.pop();
     }
