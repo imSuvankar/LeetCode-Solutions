@@ -23,14 +23,14 @@ class Solution{
         }
         
         while(i >= 0) {
-            int temp = a[i] + carry + 0;
+            int temp = a[i] + carry;
             ans.insert(0, to_string(temp % 10));
             carry = temp / 10;
             i--;
         }
         
         while(j >= 0) {
-            int temp = b[j] + carry + 0;
+            int temp = b[j] + carry;
             ans.insert(0, to_string(temp % 10));
             carry = temp / 10;
             j--;
