@@ -17,30 +17,29 @@ class Solution{
         
         while(i >= 0 && j >= 0) {
             int temp = a[i] + b[j] + carry;
-            ans.push_back(temp % 10 + '0');
+            ans.insert(0, to_string(temp % 10));
             carry = temp / 10;
             i--, j--;
         }
         
         while(i >= 0) {
             int temp = a[i] + carry + 0;
-            ans.push_back(temp % 10 + '0');
+            ans.insert(0, to_string(temp % 10));
             carry = temp / 10;
             i--;
         }
         
         while(j >= 0) {
             int temp = b[j] + carry + 0;
-            ans.push_back(temp % 10 + '0');
+            ans.insert(0, to_string(temp % 10));
             carry = temp / 10;
             j--;
         }
         
-        if(carry) ans.push_back(carry + '0');
+        if(carry) ans.insert(0, to_string(carry));
         
-        while(ans[ans.size()-1] == '0') ans.pop_back();
+        while(ans[0] == '0') ans.erase(0,1);
         
-        reverse(ans.begin(), ans.end());
         return ans;
     }
 };
