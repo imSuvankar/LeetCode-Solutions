@@ -9,7 +9,7 @@ public:
 
 
 
-        // APPROACH 2: 
+        // APPROACH 2:
         int n = nums.size();
         int expectedSum = n*(n+1)/2;
 
