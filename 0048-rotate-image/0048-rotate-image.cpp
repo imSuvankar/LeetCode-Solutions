@@ -3,7 +3,7 @@ public:
     void rotate(vector<vector<int>>& matrix) {
         
         /*
-        // APPROACH 1:
+        // APPROACH 1: 
         int n = matrix.size();
 
         // step 1: transpose
