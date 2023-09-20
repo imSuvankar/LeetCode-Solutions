@@ -13,15 +13,9 @@ public:
             }
         }
 
-        // step 2: row-wise swapping
+        // step 2: row-wise reversing
         for(int i = 0; i < n; i++) {
-            int start = 0;
-            int end = n-1;
-            while(start <= end) {
-                swap(matrix[i][start], matrix[i][end]);
-                start++;
-                end--;
-            }
+            reverse(matrix[i].begin(), matrix[i].end());
         }
         */
         
