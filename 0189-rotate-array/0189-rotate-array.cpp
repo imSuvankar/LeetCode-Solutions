@@ -8,7 +8,7 @@ public:
         // reverse(nums.begin() + (k % nums.size()), nums.end());
 
 
-        // APPROACH 2:
+        // APPROACH 2: 
         int n = nums.size();
         vector<int> ans(n);
         for(int i = 0; i < n; i++) ans[(i+k) % n] = nums[i];
