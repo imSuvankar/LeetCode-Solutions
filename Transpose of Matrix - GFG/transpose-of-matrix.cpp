@@ -8,15 +8,9 @@ class Solution
     public:  
     void transpose(vector<vector<int> >& matrix, int n)
     { 
-        vector<vector<int>> ans;
-        
-        for(int col  = 0; col < n; col++) {
-            vector<int> temp;
-            for(int row = 0; row < n; row++) temp.push_back(matrix[row][col]);
-            ans.push_back(temp);
+        for(int i = 0; i < n; i++) {
+            for(int j = i; j < n; j++) swap(matrix[i][j], matrix[j][i]);
         }
-        
-        matrix = ans;
     }
 };
 
