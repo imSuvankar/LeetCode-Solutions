@@ -4,7 +4,7 @@ public:
         int n = nums.size();
 
         vector<int> leftSums(n, -1);
-        leftSums[0] = nums[0];
+        leftSums[0] = nums[0]; 
         
         vector<int> rightSums(n, -1);
         rightSums[n-1] = nums[n-1];
