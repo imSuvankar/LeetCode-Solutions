@@ -7,7 +7,7 @@ public:
         for(int i = 0; i < k; i++) sum += nums[i];
         double ans = sum / (double)k;
 
-        // then sliding window 
+        // then sliding window
         int i = 0;
         int j = i+k;
         while(j < nums.size()) {
