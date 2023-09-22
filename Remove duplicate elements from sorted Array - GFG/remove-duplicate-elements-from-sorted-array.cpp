@@ -12,11 +12,28 @@ class Solution{
 public:
     int remove_duplicate(int a[],int n){
         
+        /*
+        // APPROACH 1 -> using SET
         set<int> ans(a, a+n);
         vector<int> v(ans.begin(), ans.end());
         
         for(int i = 0; i < v.size(); i++) a[i] = v[i];
         return v.size();
+        */
+        
+        
+        // APPROACH 2 -> two pointer
+        int i = 0;
+        int j = 0;
+        
+        while(i < n) {
+            if(a[i] != a[j]) {
+                a[++j] = a[i];
+            }
+            i++;
+        }
+        
+        return j+1;
     }
 };
 
