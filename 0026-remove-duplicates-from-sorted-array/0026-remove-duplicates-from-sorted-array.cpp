@@ -15,10 +15,7 @@ public:
         int j = 0;
 
         while(i < nums.size()) {
-            if(nums[i] != nums[j]) {
-                j++;
-                nums[j] = nums[i];
-            } 
+            if(nums[i] != nums[j]) nums[++j] = nums[i];
             i++;
         }
 
