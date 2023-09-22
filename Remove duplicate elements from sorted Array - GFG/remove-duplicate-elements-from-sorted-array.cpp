@@ -27,12 +27,9 @@ public:
         int j = 0;
         
         while(i < n) {
-            if(a[i] != a[j]) {
-                a[++j] = a[i];
-            }
+            if(a[i] != a[j]) a[++j] = a[i];
             i++;
         }
-        
         return j+1;
     }
 };
