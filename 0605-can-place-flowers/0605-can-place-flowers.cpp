@@ -11,7 +11,7 @@ public:
 
                 if(!prev && !next) {
                     flowerbed[i] = 1;
-                    n--;
+                    n--; 
                 }
             }
             i++;
