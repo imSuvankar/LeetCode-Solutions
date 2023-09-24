@@ -13,6 +13,6 @@ public:
             mid = start + (end - start) / 2;
         }
         
-        return -1; 
+        return -1;
     }
 };
