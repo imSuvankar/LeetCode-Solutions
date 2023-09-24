@@ -2,6 +2,7 @@
 using namespace std;
 
 
+
 int missingElement(vector<int>& nums) {
   int start = 0;
   int end = nums.size() - 1;
