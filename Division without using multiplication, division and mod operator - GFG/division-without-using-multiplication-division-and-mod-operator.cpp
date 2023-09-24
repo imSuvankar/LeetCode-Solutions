@@ -14,7 +14,7 @@ class Solution
     public:
     long long divide(long long dividend, long long divisor) 
     {
-        bool sign = ((dividend < 0 && 0 < divisor) || (0 < dividend && divisor < 0)) ? 0 : 1; 
+        bool sign = ((0 < dividend && divisor < 0) || (dividend < 0 && 0 < divisor)) ? 0 : 1;
         
         dividend = abs(dividend);
         divisor = abs(divisor);
@@ -25,19 +25,19 @@ class Solution
         long long mid = start + (end - start) / 2;
         
         while(start <= end) {
-            if(dividend == mid * divisor) {
+            if(mid * divisor == dividend) {
                 ans = mid;
                 break;
-            }
-            else if(dividend < mid * divisor) end = mid - 1;
-            else {
+            } 
+            else if (mid * divisor < dividend) {
                 ans = mid;
                 start = mid + 1;
             }
+            else end = mid - 1;
             mid = start + (end - start) / 2;
         }
         
-        return (sign == 1) ? ans : -ans;
+        return sign ? ans : -ans;
     }
 };
 
