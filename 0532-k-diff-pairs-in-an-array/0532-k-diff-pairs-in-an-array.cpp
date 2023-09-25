@@ -37,6 +37,6 @@ public:
             if(i == j) j++;
         }
 
-        return ans.size(); 
+        return ans.size();
     }
 };
