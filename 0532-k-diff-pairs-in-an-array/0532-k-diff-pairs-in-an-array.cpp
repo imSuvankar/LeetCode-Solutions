@@ -19,7 +19,7 @@ public:
 
 
 
-        // APPROACH 2: TWO POINTER
+        // APPROACH 2: SORT & TWO POINTER
         sort(nums.begin(), nums.end());
 
         int i = 0; 
