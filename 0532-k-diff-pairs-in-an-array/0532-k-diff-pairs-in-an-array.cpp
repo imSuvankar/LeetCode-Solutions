@@ -3,7 +3,7 @@ public:
     int findPairs(vector<int>& nums, int k) {
 
         /*
-        // APPROACH 1: BRUTE FORCE
+        // APPROACH 1: BRUTE -> ITERATIVE
         set<pair<int, int>> ans;
         
         for(int i = 0; i < nums.size(); i++) {
@@ -17,9 +17,10 @@ public:
         return ans.size();
         */
 
+        
 
-
-        // APPROACH 2: SORT & TWO POINTER
+        /*
+        // APPROACH 2: OPTIMAL -> SORT & TWO POINTER
         sort(nums.begin(), nums.end());
 
         int i = 0; 
@@ -37,6 +38,24 @@ public:
             if(i == j) j++;
         }
 
-        return ans.size();
+        return ans.size(); 
+        */
+
+
+
+        //APPROACH 3: BEST -> SORT & BINARY SEARCH
+        sort(nums.begin(), nums.end());
+
+        int i = 0;
+        int ans = 0;
+
+        while(i < nums.size()-1) {
+            int diff = nums[i] + k;
+            if(binary_search(nums.begin()+i+1, nums.end(), diff)) ans++;
+            while(i+1 < nums.size() && nums[i] == nums[i+1]) i++;
+            i++;
+        }
+
+        return ans;
     }
 };
