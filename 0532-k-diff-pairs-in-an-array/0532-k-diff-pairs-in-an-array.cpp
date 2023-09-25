@@ -31,7 +31,7 @@ public:
                 ans.insert({nums[i], nums[j]});
                 i++, j++;
             }
-            else if(nums[j] - nums[i] < k) j++;
+            else if(nums[j] - nums[i] < k) j++; 
             else i++;
 
             if(i == j) j++;
