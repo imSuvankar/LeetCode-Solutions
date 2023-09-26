@@ -5,35 +5,18 @@ bool comp(vector<int> a, vector<int> b) {
 class Solution {
 public:
     int findLongestChain(vector<vector<int>>& pairs) {
-        
         sort(pairs.begin(), pairs.end(), comp);
 
-        /*
-        // FOR CHECKING: START
-        cout << "[";
-        for(auto i : pairs) {
-            cout << "[" << i[0] << "," << i[1] << "],";
-        }
-        cout << "]";
-        // END
-        */
-        
-        int ans = 0;
-        
-        for(int i = 0; i < pairs.size(); i++) {
-            int temp = 1;
-            int curr = pairs[i][1];
+        int ans = 1;
+        int curr = pairs[0][1];
 
-            for(int j = i+1; j < pairs.size(); j++) {
-                if(curr < pairs[j][0]) {
-                    temp++;
-                    curr = pairs[j][1];
-                } 
+        for(int i = 1; i < pairs.size(); i++) {
+            if(curr < pairs[i][0]) {
+                ans++;
+                curr = pairs[i][1];
             }
-
-            if(ans < temp) ans = temp;
         }
 
-        return ans;
+        return ans; 
     }
 };
