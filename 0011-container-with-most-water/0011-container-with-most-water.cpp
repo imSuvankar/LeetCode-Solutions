@@ -13,6 +13,6 @@ public:
             (height[i] < height[j]) ? i++ : j--;
         }
         
-        return ans;
+        return ans; 
     }
 };
