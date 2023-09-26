@@ -7,8 +7,19 @@ public:
     int findLongestChain(vector<vector<int>>& pairs) {
         
         sort(pairs.begin(), pairs.end(), comp);
-        int ans = 0;
 
+        /*
+        // FOR CHECKING: START
+        cout << "[";
+        for(auto i : pairs) {
+            cout << "[" << i[0] << "," << i[1] << "],";
+        }
+        cout << "]";
+        // END
+        */
+        
+        int ans = 0;
+        
         for(int i = 0; i < pairs.size(); i++) {
             int temp = 1;
             int curr = pairs[i][1];
