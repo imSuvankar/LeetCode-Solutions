@@ -11,6 +11,6 @@ public:
             if(!(sum & 1)) ans++;
         }
 
-        return ans-1;
+        return ans-1; 
     }
 };
