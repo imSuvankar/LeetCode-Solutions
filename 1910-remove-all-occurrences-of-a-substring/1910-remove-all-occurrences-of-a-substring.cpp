@@ -3,7 +3,7 @@ public:
     string removeOccurrences(string s, string part) {
         
         /*
-        // RECURSIVE
+        // RECURSIVE 
         if(s.find(part) == string::npos) return s;
 
         auto it = s.find(part); 
