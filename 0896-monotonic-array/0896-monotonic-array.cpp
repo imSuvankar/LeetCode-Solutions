@@ -10,6 +10,8 @@ public:
             }
         }
         
+        if(cond1) return true;
+        
         bool cond2 = true;
         for(int i = 0; i < nums.size()-1; i++) {
             if(nums[i] < nums[i+1]) {
@@ -18,6 +20,6 @@ public:
             }
         }
 
-        return cond1 || cond2;
+        return cond2;
     }
 };
