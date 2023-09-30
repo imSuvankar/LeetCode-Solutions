@@ -1,4 +1,6 @@
 // same as -> 647. Palindromic Substrings
+// instead of the total number of valid substrings, it just asks for the longest one  
+
 
 class Solution {
 private:
