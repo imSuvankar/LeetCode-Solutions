@@ -1,5 +1,5 @@
 /*
-// APPROACH 1: O(n^3) -> checking for every substring
+// APPROACH 1: O(n^3) -> checking for every substring 
 class Solution {
 private:
     bool check(string s) {
