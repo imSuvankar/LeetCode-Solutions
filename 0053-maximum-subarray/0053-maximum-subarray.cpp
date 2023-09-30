@@ -3,7 +3,6 @@ public:
     int maxSubArray(vector<int>& nums) {
         
         // kadanes algorithm
-        
         int ans = INT_MIN;
         int currMax = 0;
         
