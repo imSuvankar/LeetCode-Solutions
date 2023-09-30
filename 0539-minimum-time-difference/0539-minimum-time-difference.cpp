@@ -14,10 +14,7 @@ public:
         int ans = INT_MAX;
 
         for(int i = 0; i < mins.size()-1; i++) {
-            int type1 = mins[i] + 1440 - mins[i+1];
-            int type2 = max(mins[i], mins[i+1]) - min(mins[i], mins[i+1]);
-
-            ans = min(ans, min(type1, type2));
+            ans = min(ans, mins[i+1] - mins[i]);
             if(!ans) return 0;
         }
         
