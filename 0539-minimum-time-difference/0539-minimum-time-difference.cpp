@@ -9,6 +9,7 @@ public:
             int min = stoi(i.substr(i.find(':')+1, 5));
             mins.push_back(hour*60 + min);
         }
+        
         sort(mins.begin(), mins.end());
 
         int ans = INT_MAX;
