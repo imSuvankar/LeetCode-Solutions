@@ -12,7 +12,7 @@ public:
             for(char c : bank[i]) if(c == '1') tempLasers++;
             
             ans += (laserInCurrFloor * tempLasers);
-            if(tempLasers) laserInCurrFloor = tempLasers;
+            if(tempLasers) laserInCurrFloor = tempLasers; 
         }
 
         return ans;
