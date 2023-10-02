@@ -1,4 +1,27 @@
 class Solution {
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        
+        map<string, vector<string>> strMap;
+
+        for(string s : strs) {
+            string temp = s;
+            sort(temp.begin(), temp.end());
+            strMap[temp].push_back(s);
+        }
+
+        vector<vector<string>> ans;
+        for(auto i : strMap) ans.push_back(i.second);
+        return ans;
+    }
+};
+
+
+
+/*
+//APPROACH 2: my approach
+
+class Solution {
 private:
     map<char, int> getMapping(string s) {
         map<char, int> ans;
@@ -36,3 +59,4 @@ public:
         return ans;
     }
 };
+*/
