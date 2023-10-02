@@ -21,7 +21,7 @@ private:
 public:
     vector<string> findAndReplacePattern(vector<string>& words, string pattern) {
         
-        string patternOfPattern = getPattern(pattern);
+        string patternOfPattern = getPattern(pattern); 
 
         vector<string> ans;
         for(string s : words) {
