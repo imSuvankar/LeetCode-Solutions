@@ -10,7 +10,7 @@ public:
             char curr = minStr[i];
 
             for(int j = 0; j < strs.size(); j++) {
-                if(i < strs[j].size() && strs[j][i] != curr) {
+                if(strs[j][i] != curr) {
                     flag = false;
                     break;
                 }
