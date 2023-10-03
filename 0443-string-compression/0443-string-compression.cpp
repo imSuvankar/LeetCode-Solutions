@@ -1,39 +1,23 @@
 class Solution {
-private:
-    vector<char> getCharVect(int n) {
-        vector<char> ans;
-        while(n) {
-            ans.insert(ans.begin(), '0'+(n%10));
-            n /= 10;
-        }
-        return ans;
-    }
-
-
 public:
     int compress(vector<char>& chars) {
-        vector<char> ans = {chars[0]};
+        
+        vector<char> ans;
+        int i = 0;
 
-        char currChar = chars[0];
-        int currCount = 1;
+        while(i < chars.size()) {
 
-        for(int i = 1; i < chars.size(); i++) {
-            if(currChar == chars[i]) currCount++;
-            
-            else {
-                if(currCount > 1) {
-                    vector<char> temp = getCharVect(currCount);
-                    ans.insert(ans.end(), temp.begin(), temp.end());
-                }
-                ans.push_back(chars[i]);
-                currChar = chars[i];
-                currCount = 1;
+            char currChar = chars[i];
+            ans.push_back(currChar);
+            int currCount = 1;
+
+            while(i+1 < chars.size() && currChar == chars[i+1]) currCount++, i++;
+
+            if(currCount > 1) {
+                for(char c : to_string(currCount)) ans.push_back(c);
             }
-        }
 
-        if(currCount > 1) {
-            vector<char> temp = getCharVect(currCount);
-            ans.insert(ans.end(), temp.begin(), temp.end());
+            i++;
         }
 
         chars = ans;
