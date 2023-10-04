@@ -7,7 +7,7 @@ public:
         bool lock = true;
 
         for(char c : s) {
-            if(isalpha(c) || c == '.') break;
+            if(isalpha(c) || c == '.') break; 
 
             else if(lock && c == ' ') continue;
             else if(!lock && c == ' ') break;
