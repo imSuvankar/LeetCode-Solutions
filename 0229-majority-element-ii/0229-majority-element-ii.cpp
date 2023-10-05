@@ -7,6 +7,6 @@ public:
 
         vector<int> ans;
         for(auto i : intMap) if(i.second > nums.size()/3) ans.push_back(i.first);
-        return ans;
+        return ans; 
     }
 };
