@@ -10,10 +10,10 @@ public:
         vector<int> glassInHome(n, 0);
 
         for(int i = 0; i < n; i++) {
-            for(int j = 0; j < garbage[i].size(); j++) {
-                if(garbage[i][j] == 'M') metalInHome[i]++;
-                else if(garbage[i][j] == 'P') paperInHome[i]++;
-                else if(garbage[i][j] == 'G') glassInHome[i]++;
+            for(char c : garbage[i]) {
+                if(c == 'M') metalInHome[i]++;
+                else if(c == 'P') paperInHome[i]++;
+                else if(c == 'G') glassInHome[i]++;
             }
         }
         
