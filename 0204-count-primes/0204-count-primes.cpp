@@ -45,17 +45,17 @@ public:
 
         // seive of eratosthenes
         int ans = 0;
-
+        
         vector<bool> nums(n+1, true);
         nums[0] = nums[1] = false;
-
-        for(int i = 2; i < n; i++) {
+        
+        for(int i = 2; i < n; ++i) {
             if(nums[i]) {
                 ans++;
-                for(int j = 2*i; j < n; j += i) nums[j] = false;
+                for(int j=2*i; j<n; j+=i) nums[j] = false;
             }
         }
-
+        
         return ans;
     }
 };
