@@ -4,36 +4,21 @@ public:
 
         int ans = 0;
         bool sign = true;
-        bool lock = true;
+        int i = 0;
 
-        for(char c : s) {
-            if(isalpha(c) || c == '.') break; 
+        while(i < s.size() && s[i] == ' ') i++;
 
-            else if(lock && c == ' ') continue;
-            else if(!lock && c == ' ') break;
+        if(i < s.size() && (s[i] == '+' || s[i] == '-')) {
+            sign = (s[i] == '+') ? true : false;
+            i++;
+        }
 
-            else if(lock && (c == '+' || c == '-')) {
-                sign = (c == '+') ? true : false;
-                lock = false;
+        while(i < s.size() && isdigit(s[i])) {
+            if(ans > INT_MAX / 10 || (ans == INT_MAX / 10 && s[i] > '7')) {
+                return sign ? INT_MAX : INT_MIN;
             }
-            else if(!lock && (c == '+' || c == '-')) break;
-
-            else if(lock && isdigit(c)) {
-                if (ans > INT_MAX / 10 || (ans == INT_MAX / 10 && (c-'0') > 7)) {
-                    return sign ? INT_MAX : INT_MIN;
-                }
-                ans = ans * 10 + (c - '0');
-                lock = false;
-            }
-            else if(lock && !isdigit(c)) continue;
-
-            else if(!lock && isdigit(c)) {
-                if (ans > INT_MAX / 10 || (ans == INT_MAX / 10 && (c-'0') > 7)) {
-                    return sign ? INT_MAX : INT_MIN;
-                }                
-                ans = ans * 10 + (c - '0');
-            }
-            else if(!lock && !isdigit(c)) break;
+            ans = ans * 10 + (s[i] - '0');
+            i++;
         }
 
         return sign ? ans : -ans;
