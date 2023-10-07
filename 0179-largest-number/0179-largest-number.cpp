@@ -14,10 +14,14 @@ public:
         string ans = "";
         for(string s : strs) ans += s;
 
+        /*
         if(ans[0] == '0' && 1 < ans.size()) {
             while(ans.front() == '0') ans.erase(0,1);
         }
-
         return ans.empty() ? "0" : ans;
+        */
+
+        // or,
+        return (ans[0] == '0') ? "0" : ans;
     }
 };
