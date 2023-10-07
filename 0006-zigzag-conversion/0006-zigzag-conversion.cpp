@@ -18,7 +18,7 @@ public:
             }
         }
 
-        string ans = "";
+        string ans = ""; 
         for(string st : rows) ans += st;
         return ans;
     }
