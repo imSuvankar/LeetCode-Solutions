@@ -30,6 +30,6 @@ public:
 
 
         int n = allNums.size();
-        return (n & 1) ? allNums[n/2] : (double)(allNums[n/2 - 1] + allNums[n/2]) / 2;
+        return (n & 1) ? allNums[n/2] : (double)(allNums[n/2 - 1] + allNums[n/2]) / 2; 
     }
 };
