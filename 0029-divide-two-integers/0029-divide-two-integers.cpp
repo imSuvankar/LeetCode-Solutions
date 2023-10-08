@@ -14,7 +14,6 @@ public:
 
 
         bool sign = (0 < dividend && divisor < 0) || (0 < divisor && dividend < 0) ? false : true;
-        int ans = 0;
 
         dividend = abs(dividend);
         divisor = abs(divisor);
@@ -26,10 +25,7 @@ public:
         while(start <= end) {
             if(dividend / divisor == mid) return sign ? mid : -mid;
             else if(dividend / divisor < mid) end = mid - 1;
-            else{
-                ans = mid;
-                start = mid + 1;
-            }
+            else start = mid + 1;
 
             mid = start + (end - start) / 2;
         }
