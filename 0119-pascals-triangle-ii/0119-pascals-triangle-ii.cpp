@@ -1,4 +1,4 @@
-// APPROACH 1: like "Pascal's Triangle I"
+// APPROACH 1: like "Pascal's Triangle I" 
 class Solution {
 public:
     vector<int> getRow(int rowIndex) {
