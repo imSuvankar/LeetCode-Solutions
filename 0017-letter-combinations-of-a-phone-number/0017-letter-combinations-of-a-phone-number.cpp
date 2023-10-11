@@ -22,7 +22,7 @@ public:
                     temp.push_back(s + c);
                 }
             }
-            ans = temp;
+            ans = temp; 
         }
 
         return ans;
