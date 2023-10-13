@@ -4,6 +4,6 @@ public:
         
         int X = 0;
         for(string s : operations) (s == "++X" || s == "X++") ? X++ : X--;
-        return X;
+        return X; 
     }
 };
